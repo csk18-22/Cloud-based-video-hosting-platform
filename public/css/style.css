@@ -1,0 +1,701 @@
+:root {
+  --yellow: #fca311;
+  --blue: #14213d;
+  --black: #000000;
+  --offwhite: #e5e5e5;
+  --white: #ffffff;
+  --font-family-sans-serif: "Montserrat", "Nunito", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
+  background-color: var(--blue);
+  overflow-x: hidden;
+}
+
+.border-yellow {
+  border: 1px solid var(--yellow);
+}
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tp {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+.text-center {
+  text-align: center;
+}
+.text-bold {
+  color: var(--yellow);
+  font-size: 50px;
+  font-weight: bold;
+}
+input {
+  border-color: var(--yellow);
+}
+
+.btn {
+  border: none;
+}
+
+.login-container,
+.register-container {
+  margin-top: 3%;
+}
+
+#register-btn:hover,
+#cancel-btn:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--offwhite);
+}
+
+#register-btn {
+  background-color: var(--yellow);
+}
+
+.white {
+  margin-top: 30px;
+  color: var(--white);
+}
+
+#register-btn,
+#cancel-btn {
+  padding: 10px 30px 10px 30px;
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+.text-white:hover {
+  text-decoration: none;
+}
+.text-yellow:hover {
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+#google-btn {
+  cursor: pointer;
+  padding: 10px 30px 10px 30px;
+}
+#login-btn {
+  padding: 10px 30px 10px 30px;
+}
+.warning {
+  border: 2px solid black;
+  background-color: white;
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.warning:hover {
+  background: var(--yellow);
+  color: var(--offwhite);
+}
+#reset-pass-field {
+  display: none;
+}
+#reset-pass:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: var(--blue);
+  border-bottom: 1px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar .username-icon {
+  margin-left: 20px;
+  margin-top: 16px;
+  display: block;
+  color: var(--offwhite);
+  float: left;
+}
+
+.sidebar .username {
+  background-color: var(--blue);
+  padding: 20px 0px 20px 5px;
+  font-size: 15px;
+  display: inline-block;
+  color: var(--offwhite);
+}
+
+/* Sidebar links */
+.sidebar span {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  background-color: var(--offwhite);
+  font-size: 15px;
+}
+
+/* .sidebar span:hover {
+  background-color: var(--blue);
+} */
+
+.sidebar span a {
+  font-weight: bold;
+  color: var(--blue);
+  margin: 10px;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  color: var(--yellow);
+}
+
+/* Links on mouse-over */
+/* .sidebar a:hover:not(.active) {
+  color: white;
+} */
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+#reset-pass {
+  background-color: var(--black);
+  border: 1px solid var(--yellow);
+}
+
+#reset-pass-field {
+  display: none;
+}
+
+#reset-pass:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+/* @media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+} */
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+/* @media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+} */
+
+/* Dashboard content */
+
+.home-container {
+  color: var(--offwhite);
+}
+
+.overview-heading,
+.top-videos-heading {
+  color: var(--yellow);
+  margin-left: 5px;
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* all the content which is to the left */
+.views,
+.top-videos,
+.categories,
+.table,
+.recently-viewed-videos {
+  margin-left: 20px;
+}
+
+/* second row */
+
+.mins-watched p,
+.views p,
+.data-usage p,
+.storage-usage p {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mins-watched,
+.views,
+.data-usage,
+.storage-usage,
+.top-videos,
+.sessions-by-device {
+  background-color: var(--offwhite);
+  color: var(--blue);
+}
+
+.mins-watched,
+.views,
+.data-usage,
+.storage-usage {
+  height: 149px;
+  width: 223px;
+  margin-right: 19px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.top-videos,
+.sessions-by-device {
+  margin-right: 17px;
+  height: 256px;
+}
+
+.top-videos {
+  text-align: left;
+  background-color: var(--blue);
+  border: 1px solid var(--offwhite);
+  width: 820px;
+}
+
+.top-videos div {
+  width: 130px;
+  background-color: var(--offwhite);
+  margin: 32px 20px 32px 32px;
+}
+
+.top-videos .video-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.top-videos .video-category {
+  font-size: 11px;
+  margin-top: -30px;
+}
+
+.top-videos .icons {
+  margin-top: 20px;
+}
+
+.video-title-col {
+  border-radius: 3px;
+}
+
+.sessions-by-device {
+  padding: 10px;
+  text-align: left;
+  width: 260px;
+}
+
+.views-count {
+  margin-right: 10px;
+}
+
+/* third row */
+
+.categories p,
+.visits p,
+.days-remaining p,
+.get-started p,
+.recently-viewed-videos {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.categories,
+.visits,
+.days-remaining,
+.get-started {
+  height: max-content;
+}
+
+.categories-div,
+.visits-div,
+.days-remaining-div {
+  width: 230px;
+}
+
+.upload-area {
+  border: 2px solid black;
+  border-style: dashed;
+}
+
+.get-started-div {
+  width: 362px;
+}
+
+.categories-div,
+.visits-div,
+.days-remaining-div,
+.get-started-div {
+  position: relative;
+  height: 190px;
+  margin-right: 15px;
+  background-color: var(--offwhite);
+}
+
+.total {
+  padding: 19px 0px 0px 20px;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.total,
+.categories h2 {
+  position: absolute;
+}
+
+.categories h2,
+.visits h2 {
+  padding: 40px 0px 0px 20px;
+  color: var(--yellow);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* foruth row */
+.table {
+  margin-left: 35px;
+  background-color: var(--offwhite);
+  height: max-content;
+  width: 1095px;
+  padding: 20px;
+}
+
+.rvv-content,
+.rvv-content-data {
+  margin: 105px;
+  line-height: 2;
+}
+
+.rvv-content {
+  font-weight: bold;
+}
+
+/* container styles */
+.myvideos-container,
+.analytics-container,
+.home-container {
+  margin-left: 15%;
+}
+.heading {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+}
+.button-right {
+  float: right;
+  margin-right: 10%;
+}
+.button-right button {
+  padding: 10px;
+}
+
+/* below 1200 this happens */
+@media (max-width: 1200px) {
+  .sessions-by-device {
+    margin-top: 30px;
+  }
+  .get-started {
+    margin-top: 10px;
+  }
+  .sessions-by-device,
+  .get-started {
+    margin-left: 20px;
+  }
+  .rvv-content,
+  .rvv-content-data {
+    margin: 80px;
+  }
+  .categories-div,
+  .visits-div,
+  .days-remaining-div {
+    width: 290px;
+  }
+  .table {
+    width: 900px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .data-usage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .storage-usage {
+    margin-top: 20px;
+  }
+  .top-videos {
+    padding: 0px;
+    height: fit-content;
+  }
+  .top-videos div {
+    width: 280px;
+    margin: 20px 20px 20px 28px;
+  }
+  .views-count {
+    margin-right: 20px;
+  }
+  .days-remaining {
+    margin-left: 20px;
+  }
+  .days-remaining-div {
+    width: 600px;
+  }
+  .table {
+    width: fit-content;
+  }
+  .rvv-content,
+  .rvv-content-data {
+    margin: 48px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .top-videos {
+    height: fit-content;
+  }
+  .top-videos div {
+    width: 200px;
+  }
+  .sessions-by-device {
+    padding: 70px;
+    width: 520px;
+  }
+  .categories-div,
+  .visits-div,
+  .days-remaining-div,
+  .get-started-div {
+    width: 500px;
+  }
+  .visits {
+    margin-left: 20px;
+  }
+  .table {
+    width: fit-content;
+  }
+  .rvv-content,
+  .rvv-content-data {
+    margin: 35px;
+  }
+  .sidebar {
+    width: max-content;
+  }
+  .sidebar span {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .top-videos {
+    width: 500px;
+  }
+  .sessions-by-device {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 534px) {
+  .top-videos div {
+    width: 500px;
+  }
+  .video-title,
+  .video-category,
+  .icons 
+  /* FIX: category doesn't ALIGN TO Center */ {
+    text-align: center;
+  }
+  .sessions-by-device {
+    /* width: 500px; */
+    width: max-content;
+  }
+}
+
+@media only screen and (max-width: 503px) {
+  .mins-watched,
+  .views,
+  .data-usage,
+  .storage-usage {
+    width: 400px;
+  }
+  .mins-watched,
+  .storage-usage {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .rvv-content,
+  .rvv-content-data {
+    margin: 30px;
+  }
+}
+
+.upload-area {
+  border: 2px solid black;
+  border-style: dashed;
+}
+.upload-area button {
+  background-color: var(--yellow);
+}
+.upload-area-videos {
+  border: 2px solid var(--offwhite);
+  border-style: dashed;
+}
+.upload-area-videos img {
+  color: var(--white);
+}
+.upload-area-videos button {
+  background-color: var(--yellow);
+}
+/* myvideos */
+.search-bar {
+  background-color: var(--offwhite);
+  width: 200px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+select:focus {
+  outline: none;
+}
+
+.myvideos-table {
+  margin: 0px;
+  color: var(--white);
+  margin-top: 30px;
+  /* box-shadow: 5px 10px 8px 10px #888888; */
+}
+.myvideos-table-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: var(--blue);
+  background-color: var(--offwhite);
+  margin: 0px;
+}
+.myvideos-table-row {
+  background-color: var(--white);
+  color: var(--blue);
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.table-row {
+  width: 100px;
+}
+
+.table-head {
+  width: 75px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  background-color: rgb(192, 160, 202);
+  color: purple;
+  padding: 5px 10px 5px 10px;
+  border-radius: 35px;
+}
+
+.visibility select {
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* analytics */
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--yellow);
+}
+.nav-link:hover,
+.nav-item:hover {
+  color: var(--white);
+  border-color: transparent;
+  border: none;
+}
+.nav-tabs .nav-link {
+  color: var(--white);
+}
+
+.nav-tabs {
+  border: none;
+}
+.analytics-heading,
+.tab-content {
+  margin-left: 17px;
+}
+
+.tab-content .line {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+}
+.tab-content .row {
+  margin-top: 15px;
+}
+.tab-content .analytics {
+  border-radius: 2px;
+  background-color: var(--offwhite);
+  color: var(--black);
+  text-align: center;
+  padding-top: 10px;
+  height: 180px;
+}
+.tab-content .analyticsheading,
+.analyticsviews {
+  font-weight: bold;
+}
+.analyticsviews {
+  margin-top: 10px;
+}
+
+.top-played-videos-heading {
+  color: var(--yellow);
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.tab-content .btn {
+  background-color: var(--yellow);
+}
